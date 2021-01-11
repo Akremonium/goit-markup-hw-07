@@ -1,0 +1,12 @@
+header {
+  border-bottom: 1px solid $border-color-header;
+}
+
+.attic {
+  @include centered-flex;
+  @extend %container;
+}
+
+.main-nav {
+  @include centered-flex;
+}

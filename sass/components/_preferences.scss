@@ -1,0 +1,43 @@
+.hidden-title {
+  @extend %visually-hidden;
+}
+
+.preferences-wrap {
+  @extend %container;
+}
+
+.preferences-list {
+  display: flex;
+}
+
+.preferences-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: $text-color-secondary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.preferences {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &-icon {
+    background-color: $bg-color-almost-white;
+    border-radius: 4px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+  }
+}
+
+.preference {
+  margin-top: 0;
+  width: 270px;
+}
+
+.preference + .preference {
+  margin-left: 30px;
+}

@@ -1,0 +1,46 @@
+.regular-clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &-wrap {
+    @extend %container;
+  }
+}
+
+.clients-title {
+  @extend %title-h2;
+}
+
+.clients {
+  display: flex;
+}
+
+.client {
+  width: calc((100% - 150px) / 6);
+
+  .icon {
+    @extend %transition;
+  }
+}
+
+.client + .client {
+  margin-left: 30px;
+}
+
+.client-link {
+  @include centered-flex($type: center);
+  @extend %transition;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 170px;
+  height: 90px;
+  color: $icon-color;
+
+  transition-property: border-color;
+
+  &:hover,
+  &:focus {
+    color: $text-color-accent;
+    border-color: $text-color-accent;
+  }
+}

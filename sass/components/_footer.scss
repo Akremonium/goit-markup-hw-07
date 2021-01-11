@@ -1,0 +1,115 @@
+.basement {
+  background-color: $bg-color-dark-grey;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &-wrap {
+    @extend %container;
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.company-info {
+  @extend %flex-column;
+}
+
+.basement .logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.address {
+  @extend %transition;
+  color: $bg-color-white;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  &:hover,
+  &:focus {
+    color: $text-color-accent;
+  }
+}
+
+.contacts-bottom {
+  @extend %flex-column;
+
+  .link {
+    @extend %transition;
+    @extend %link-fonts;
+    margin-top: 9px;
+  }
+}
+
+.join {
+  margin-left: 70px;
+
+  .socials {
+    padding: 0;
+  }
+
+  .socials-link {
+    color: $bg-color-white;
+  }
+}
+
+.bottom-title {
+  margin-bottom: 20px;
+  color: $bg-color-white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.subscription-section {
+  margin-left: auto;
+}
+
+.subscription {
+  display: flex;
+
+  .icon {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+.subscription-input {
+  @extend %transition;
+  display: block;
+  width: 358px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: $bg-color-dark-grey;
+  color: $bg-color-white;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px $bg-color-white;
+  }
+}
+
+.subscription-button {
+  @include centered-flex;
+  width: 200px;
+  height: 50px;
+  background-color: $text-color-accent;
+  margin-left: 12px;
+  padding: 10px 28px;
+  border-color: $text-color-accent;
+  border-radius: 4px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.submit-text {
+  @extend %submit-text;
+}

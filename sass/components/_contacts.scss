@@ -1,0 +1,21 @@
+.contacts {
+  @include centered-flex;
+  margin-left: auto;
+
+  .link {
+    @include centered-flex;
+    @extend %link-fonts;
+    @extend %hover;
+    @extend %transition;
+    color: $text-color-primary;
+
+    &:nth-child(2n) {
+      margin-left: 50px;
+    }
+  }
+
+  .icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}

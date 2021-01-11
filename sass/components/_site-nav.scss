@@ -1,0 +1,34 @@
+.site-nav {
+  @include centered-flex;
+  margin-left: 93px;
+
+  .link {
+    @extend %link-fonts;
+    @extend %hover;
+    @extend %transition;
+    color: $text-color-secondary;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+  }
+
+  .item + .item {
+    margin-left: 50px;
+  }
+}
+
+.link.current {
+  color: $text-color-accent;
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: $text-color-accent;
+  border-radius: 2px;
+}
